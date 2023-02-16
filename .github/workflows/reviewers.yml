@@ -1,0 +1,28 @@
+reviewers:
+  defaults:
+    - OdiSeU
+  # per_author:
+  #   workingscorpion:
+  #   LastCow9000:
+  #   yunchanpark:
+  #   91hongppie:
+  #   3000-2:
+  #   Macjjung:
+  #   OdiSeU:
+  #     - workingscorpion
+  #     - LastCow9000
+  #     - yunchanpark
+  #     - 91hongppie
+  #     - 3000-2
+  #     - Macjjung
+  #     - OdiSeU
+  #   minukk:
+  #   jellychoco:
+  #   jhw607:
+  #   Minikanko:
+  #   JaeguSon:
+  #     - minukk
+  #     - jellychoco
+  #     - jhw607
+  #     - Minikanko
+  #     - JaeguSon
