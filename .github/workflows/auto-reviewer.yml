@@ -14,5 +14,5 @@ jobs:
         with:
           token: ${{ github.token}}
           # token: ${{ secrets.WCLUB_DEV_ACCESS_TOKEN }}
-          config: .github/reviewers.yml
+          config: .github/workflows/reviewers.yml
           use_local: true
