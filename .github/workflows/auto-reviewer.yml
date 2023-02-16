@@ -1,18 +1,46 @@
-name: Auto Request Review
+# name: Auto Request Review
+
+# on:
+#   pull_request:
+#     types: [opened, reopened]
+
+# jobs:
+#   auto-request-review:
+#     name: Auto Request Review
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Request review based on files changes and/or groups the author belongs to
+#         uses: necojackarc/auto-request-review@v0.10.0
+#         with:
+#           token: ${{ github.token}}
+#           # token: ${{ secrets.WCLUB_DEV_ACCESS_TOKEN }}
+#           config: .github/workflows/reviewers.yml
+#           use_local: true
+
+name: wclub-auto-reviewer
 
 on:
   pull_request:
     types: [opened, reopened]
 
 jobs:
-  auto-request-review:
-    name: Auto Request Review
+  assign:
     runs-on: ubuntu-latest
     steps:
-      - name: Request review based on files changes and/or groups the author belongs to
+      - name: Wclub Leaders
         uses: necojackarc/auto-request-review@v0.10.0
         with:
-          token: ${{ github.token}}
           # token: ${{ secrets.WCLUB_DEV_ACCESS_TOKEN }}
-          config: .github/workflows/reviewers.yml
-          use_local: true
+          reviewers: OdiSeU
+      # - name: Wclub Part 1 Auto Reviewer
+      #   uses: delivery-much/actions-assigner@v1
+      #   if: ${{contains(fromJson('["workingscorpion","LastCow9000","yunchanpark","91hongppie","3000-2","Macjjung","OdiSeU","kanghadong"]'), github.actor)}}
+      #   with:
+      #       token: ${{ secrets.WCLUB_DEV_ACCESS_TOKEN }}
+      #       reviewers: workingscorpion,LastCow9000,yunchanpark,91hongppie,3000-2,Macjjung,OdiSeU
+      # - name: Wclub Part 2 Auto Reviewer
+      #   uses: delivery-much/actions-assigner@v1
+      #   if: ${{contains(fromJson('["minukk","jellychoco","jhw607","Minikanko","bro-jo","JaegwanJang","JaeguSon"]'), github.actor)}}
+      #   with:
+      #       token: ${{ secrets.WCLUB_DEV_ACCESS_TOKEN }}
+      #       reviewers: minukk,jellychoco,jhw607,Minikanko,JaeguSon
