@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wclub Leaders
-        uses: necojackarc/auto-request-review@v0.10.0
+        uses: delivery-much/actions-assigner@v1
         with:
           # token: ${{ secrets.WCLUB_DEV_ACCESS_TOKEN }}
           token: ${{ github.token}}
